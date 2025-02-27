@@ -32,7 +32,7 @@ public class Dead : MonoBehaviour
     void Beginning()
 
     {
-        if(health >= 0)
+        if(health > 0)
         {
             ball.position = empty.position;
         }
