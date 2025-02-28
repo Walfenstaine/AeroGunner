@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class PL_Input : MonoBehaviour
 {
+    void Started() 
+    {
+        if (!Ball.regit.active)
+        {
+            if (Player.regit.nap != 0)
+            {
+                Interface.rid.Sum(1);
+                Ball.regit.Started();
+            }
+
+        }
+    }
+    void Muve(float m) 
+    {
+        Player.regit.nap = m;      
+    }
     private void Update()
     {
-        Player.regit.nap = Input.GetAxis("Horizontal");
+        if (Ball.regit.active) {  }
+        Muve(Input.GetAxis("Horizontal"));
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) { Started(); }
     }
 }

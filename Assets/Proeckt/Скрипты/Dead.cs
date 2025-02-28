@@ -6,8 +6,11 @@ public class Dead : MonoBehaviour
 {
     public int health;
     public GameObject[] quantityBall;
-    public Transform empty , ball;
 
+    private void Start()
+    {
+        Ball.regit.Stoped(Player.regit.starter.position);
+    }
     void OnTriggerEnter2D(Collider2D other)
 
     {
@@ -34,11 +37,12 @@ public class Dead : MonoBehaviour
     {
         if(health > 0)
         {
-            ball.position = empty.position;
+            Ball.regit.Stoped(Player.regit.starter.position);
+            Interface.rid.Sum(0);
         }
         else
         {
-
+            Interface.rid.Sum(2);
         }
     }
 

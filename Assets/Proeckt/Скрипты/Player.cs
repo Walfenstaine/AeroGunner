@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float nap;
-
+    public Transform starter;
     public static Player regit { get; set; }
     private void Awake()
     {
