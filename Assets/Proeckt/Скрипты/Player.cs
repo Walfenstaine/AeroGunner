@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float speed;
     public Rigidbody2D rb;
     public float nap;
     public Transform starter;
@@ -25,6 +26,6 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(nap, 0, 0)* 200;
+        rb.velocity = new Vector3(nap, 0, 0) * speed;
     }
 }
