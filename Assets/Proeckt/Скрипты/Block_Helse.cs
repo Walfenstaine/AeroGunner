@@ -9,11 +9,16 @@ public class Block_Helse : MonoBehaviour
     public Image img;
     public int helse;
     float timer = 0;
-    private void Start()
+
+    void Start()
+
     {
         helse = Random.Range(0, sprites.Length);
+        Counter.regit.gameObjects.Add(gameObject);
     }
+
     public void Damage() 
+
     {
         if (Time.time >= timer) 
         {
@@ -22,12 +27,19 @@ public class Block_Helse : MonoBehaviour
             {
                 helse -= 1;
             }
-            else { Destroy(gameObject); }
+            else 
+            {
+                Counter.regit.gameObjects.Remove(gameObject);
+                Destroy(gameObject);
+            }
         }
        
     }
-    private void FixedUpdate()
+
+    void FixedUpdate()
+
     {
         img.sprite = sprites[helse];
     }
+
 }
