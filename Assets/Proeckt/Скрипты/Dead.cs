@@ -6,10 +6,28 @@ public class Dead : MonoBehaviour
 {
     public int health;
     public GameObject[] quantityBall;
-
+    public GameObject reclamButon;
     private void Start()
     {
         Ball.regit.Stoped(Player.regit.starter.position);
+    }
+    public void Add_Live() 
+    {
+        if (health < 3) 
+        {
+            health += 1;
+            for (int i = 0; i < quantityBall.Length; i++)
+            {
+                if (i < health)
+                {
+                    quantityBall[i].SetActive(true);
+                }
+                else
+                {
+                    quantityBall[i].SetActive(false);
+                }
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
 
@@ -31,7 +49,17 @@ public class Dead : MonoBehaviour
             Beginning();
         }
     }
-
+    private void FixedUpdate()
+    {
+        if (health < 3)
+        {
+            reclamButon.SetActive(true);
+        }
+        else 
+        {
+            reclamButon.SetActive(false);
+        }
+    }
     void Beginning()
 
     {

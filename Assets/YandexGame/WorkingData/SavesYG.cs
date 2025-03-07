@@ -11,8 +11,7 @@ namespace YG
         public bool promptDone;
 
         public int record = 0;
-        public int coins = 70;
-        public int numPicch = 0;
+        public string lvl = "Scene1";
 
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()

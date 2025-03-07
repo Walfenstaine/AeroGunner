@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Bord : MonoBehaviour
 {
     public enum Bord_Tipe {vertical, horizontal }
     public Bord_Tipe tipe;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ball") 
+        Vector2 p = collision.collider.ClosestPoint(transform.position)-new Vector2(transform.position.x,transform.position.y);
+        if (collision.gameObject.tag == "Ball")
         {
+            int y = (int)Ball.regit.forse.y;
+            int x = (int)Ball.regit.forse.x;
             if (tipe == Bord_Tipe.vertical)
             {
-                collision.gameObject.GetComponent<Ball>().forse.y = collision.gameObject.GetComponent<Ball>().forse.y * -1;
+                Ball.regit.forse.y = -y;
             }
             else
             {
-                collision.gameObject.GetComponent<Ball>().forse.x = collision.gameObject.GetComponent<Ball>().forse.x * -1;
+                Ball.regit.forse.x = -x;
             }
         }
     }

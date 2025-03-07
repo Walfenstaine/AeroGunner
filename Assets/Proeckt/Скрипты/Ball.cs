@@ -24,8 +24,10 @@ public class Ball : MonoBehaviour
     {
         Destroy(regit);
     }
+
     public void Started() 
     {
+        rb.AddForce(forse * speed);
         active = true;
     }
     public void Stoped(Vector3 t) 
@@ -33,16 +35,28 @@ public class Ball : MonoBehaviour
         active = false;
         transform.position = t;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (active)
         {
-            rb.velocity = forse * speed;
+            if (rb.velocity.magnitude < 300)
+            {
+                rb.AddForce(forse * speed);
+            }
+            forse = rb.velocity.normalized;
         }
-        else 
+        else
         {
             rb.velocity = Vector3.zero;
             transform.position = Player.regit.starter.position;
+            forse = new Vector3(1, 1);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bord") 
+        {
+            collision.gameObject.GetComponent<Block_Helse>().Damage();
         }
     }
 }

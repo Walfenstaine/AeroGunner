@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using YG;
 public class Block_Helse : MonoBehaviour
 {
     public Sprite[] sprites;
     public Image img;
     public int helse;
     float timer = 0;
-
+    int rec;
     void Start()
 
     {
+       
         helse = Random.Range(0, sprites.Length);
+        rec = helse;
         Counter.regit.gameObjects.Add(gameObject);
     }
 
@@ -29,7 +31,14 @@ public class Block_Helse : MonoBehaviour
             }
             else 
             {
-                Counter.regit.gameObjects.Remove(gameObject);
+                if (Counter.regit.gameObjects.Count > 1)
+                {
+                    Counter.regit.gameObjects.Remove(gameObject);
+                }
+                else { Interface.rid.Sum(3); }
+                YandexGame.savesData.record += rec;
+                YandexGame.NewLeaderboardScores("LEADER666", YandexGame.savesData.record);
+                YandexGame.SaveProgress();
                 Destroy(gameObject);
             }
         }

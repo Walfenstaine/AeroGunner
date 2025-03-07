@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-
     public List<GameObject> gameObjects;
     public static Counter regit { get; set; }
 
@@ -26,15 +25,5 @@ public class Counter : MonoBehaviour
     {
         regit = null;
     }
-
-    void Update()
-
-    {
-        if(gameObjects == null)
-        {
-
-        }
-    }
-
 }
     

@@ -9,7 +9,7 @@ public class Loader : MonoBehaviour
     private void Start()
     {
         SceneManager.LoadScene("Scene1");
-        //YandexGame.ResetSaveProgress();
+       // YandexGame.ResetSaveProgress();
         YandexGame.SaveProgress();
     }
 }
