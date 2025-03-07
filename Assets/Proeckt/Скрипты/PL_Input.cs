@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class PL_Input : MonoBehaviour
 {
@@ -22,8 +23,23 @@ public class PL_Input : MonoBehaviour
     }
     private void Update()
     {
-       // if (Ball.regit.active) {  }
-        Muve(Input.GetAxis("Horizontal"));
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) { Started(); }
+        if (YandexGame.EnvironmentData.isDesktop)
+        {
+            Muve(Input.GetAxis("Horizontal"));
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) { Started(); }
+        }
+        else 
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Moved)
+                {
+                    Started();
+                    Muve((touch.deltaPosition.x / Screen.width) * 30);
+                }
+            }
+            else { Player.regit.nap = 0; }
+        }
     }
 }

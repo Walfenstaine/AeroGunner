@@ -344,8 +344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: 300.03137}
-  m_SizeDelta: {x: 40, y: 7647.6523}
+  m_AnchoredPosition: {x: 460, y: 0}
+  m_SizeDelta: {x: 40, y: 15000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &55082459
 BoxCollider2D:
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 10
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &55082461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4695,8 +4695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460, y: 362.30566}
-  m_SizeDelta: {x: 40, y: 7647.6523}
+  m_AnchoredPosition: {x: -460, y: 0}
+  m_SizeDelta: {x: 40, y: 15000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1144383462
 BoxCollider2D:
@@ -4772,7 +4772,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 10
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1144383464
 CanvasRenderer:
   m_ObjectHideFlags: 0
