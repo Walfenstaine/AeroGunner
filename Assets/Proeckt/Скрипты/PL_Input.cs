@@ -23,7 +23,7 @@ public class PL_Input : MonoBehaviour
     }
     private void Update()
     {
-        if (YandexGame.EnvironmentData.isDesktop)
+        if (YandexGame.EnvironmentData.deviceType == "desktop")
         {
             Muve(Input.GetAxis("Horizontal"));
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) { Started(); }
