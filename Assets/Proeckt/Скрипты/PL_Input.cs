@@ -23,7 +23,7 @@ public class PL_Input : MonoBehaviour
     }
     private void Update()
     {
-        if (YandexGame.EnvironmentData.isDesktop)
+        if (YandexGame.EnvironmentData.deviceType == "desktop")
         {
             Muve(Input.GetAxis("Horizontal"));
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) { Started(); }
@@ -36,7 +36,7 @@ public class PL_Input : MonoBehaviour
                 if (touch.phase == TouchPhase.Moved)
                 {
                     Started();
-                    Muve((touch.deltaPosition.x / Screen.width) * 30);
+                    Muve((touch.deltaPosition.x / Screen.width) * -100);
                 }
             }
             else { Player.regit.nap = 0; }
