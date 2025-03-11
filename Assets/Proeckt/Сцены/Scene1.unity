@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!61 &252021688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1570757c015b3d94897e6ebc0940fe69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
+  speed: 500
   rb: {fileID: 381300757}
   forse: {x: 1, y: 1, z: 0}
   active: 0
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!1001 &438817538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4117,7 +4117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!1001 &1038682236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!1001 &1224536794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5111,7 +5111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!61 &1269167525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6909,7 +6909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0942d311078b8ca47a4e544cdae6b3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipe: 1
+  tipe: 0
 --- !u!61 &1836327979
 BoxCollider2D:
   m_ObjectHideFlags: 0
