@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee882eccdff6def49bc7b45e59605a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene1
+  level: Scene2
 --- !u!1 &68636196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,7 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1570757c015b3d94897e6ebc0940fe69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
+  speed: 2000
   rb: {fileID: 381300757}
   forse: {x: 1, y: 1, z: 0}
   active: 0

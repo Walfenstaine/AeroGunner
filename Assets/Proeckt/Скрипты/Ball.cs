@@ -39,7 +39,7 @@ public class Ball : MonoBehaviour
     {
         if (active)
         {
-            if (rb.velocity.magnitude < 300)
+            if (rb.velocity.magnitude < speed/10)
             {
                 rb.AddForce(forse * speed);
             }
