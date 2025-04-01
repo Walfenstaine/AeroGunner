@@ -11,7 +11,7 @@ namespace YG
         public bool promptDone;
 
         public int record = 0;
-        public string lvl = "Scene1";
+        public string lvl = "Scene 1";
 
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()
