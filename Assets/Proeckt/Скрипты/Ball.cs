@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Ball : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Ball : MonoBehaviour
     public static Ball regit { get; set; }
     private void Awake()
     {
+        speed += YandexGame.savesData.record;
         if (regit == null)
         {
             regit = this;

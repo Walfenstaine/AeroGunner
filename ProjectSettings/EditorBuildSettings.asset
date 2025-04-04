@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Proeckt/\u0421\u0446\u0435\u043D\u044B/Scene 2.unity"
     guid: e86ee1029f692d142b3acb938c22ca5d
+  - enabled: 1
+    path: "Assets/Proeckt/\u0421\u0446\u0435\u043D\u044B/Scene 3.unity"
+    guid: d5e033a5576cd6948b229423ce27d84b
+  - enabled: 1
+    path: "Assets/Proeckt/\u0421\u0446\u0435\u043D\u044B/Scene 4.unity"
+    guid: 84ca12ca11d379d418b6516131730901
   m_configObjects: {}
